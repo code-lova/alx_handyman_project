@@ -39,7 +39,7 @@
                 @else
                     <div class="menu-container">
                         <ul class="header-top-nav header-top-nav__tertiary">
-                            <li><a href="{{ route('login') }}"><i class="fa fa-user-plus"></i> {{ __('Register') }}</a></li>
+                            <li><a href="{{ route('register') }}"><i class="fa fa-user-plus"></i> {{ __('Register') }}</a></li>
                             <li><a href="{{ route('login') }}"><i class="fa fa-sign-in"></i> {{ __('Login') }}</a></li>
                         </ul>
                     </div>
@@ -67,7 +67,7 @@
             <nav class="nav-main">
                 <div class="nav-main-inner">
                     <ul data-breakpoint="992" class="flexnav">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="#">Explore</a>
                             <ul>
                                 <li><a href="page-about.html">About Us</a></li>
