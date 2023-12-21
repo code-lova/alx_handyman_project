@@ -56,6 +56,8 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'phone' => ['required', 'string', 'min:8'],
+            'location' => ['required', 'string'],
+
 
         ]);
     }
@@ -72,18 +74,20 @@ class RegisterController extends Controller
 
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:users,email',
-            'phone' => 'required|',
+            'phone' => 'required|min:10|regex:/^([0-9\s\-\+\(\)]*)$/',
             'location' => 'required',
-            'password ' => 'required|string|min:8|confirmed' 
+            'password' => 'required|string|min:8|confirmed',
 
         ]);
 
         if($validator->fails()){
 
-            return response()->json([
-                'status'=>400,
-                'message'=>$validator->errors()->first()
-            ]);
+            // return response()->json([
+            //     'status'=>400,
+            //     'message'=>$validator->errors()->first()
+            // ]);
+
+            return back()->withErrors($validator);
         }else{
 
             $pass = substr(str_shuffle("0123456789ABCDEFGHIJKLMONPQRSTUVWXYZ"), 0, 6);

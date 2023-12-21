@@ -55,13 +55,13 @@
 
     <div class="site-wrapper">
 
-        @include('layouts.inc.home_nav');
+        @include('layouts.inc.frontend.home_nav');
         <!-- Main -->
 		<div class="main" role="main">
 
              @yield('content');
 
-             @include('layouts.inc.home_footer')
+             @include('layouts.inc.frontend.home_footer')
 
         </div>
 

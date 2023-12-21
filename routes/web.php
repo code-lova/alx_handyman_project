@@ -44,3 +44,58 @@ Route::controller(\App\Http\Controllers\Frontend\FrontendController::class)->gro
     Route::get('/', 'Index')->name('front.page');
 
 });
+
+
+
+
+//Routes for Authentocated HandyMen
+
+Route::prefix('handyman-app')->middleware(['auth'])->group(function (){
+
+    Route::controller(\App\Http\Controllers\Handyman\DashboardController::class)->group(function (){
+
+        Route::get('dashboard', 'index')->name('handyman.dashboard');
+        Route::get('post_job', 'postJob');
+        Route::get('profile', 'viewProfile');
+
+    });
+
+});
+
+
+
+
+
+//Routes for Authenticated Customers
+
+
+
+
+
+
+
+
+
+
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function (){
+
+
+    Route::controller(\App\Http\Controllers\Admin\DashboardController::class)->group(function () {
+
+        Route::get('dashboard', 'index');
+    });
+
+    Route::controller(\App\Http\Controllers\Admin\HandyMenListController::class)->group(function(){
+
+        Route::get('all', 'index');
+        Route::get('profile/{id}', 'editProfile');
+        Route::delete('delete-handyman/{handymanId}', 'deleteHandyMan');
+
+    });
+
+});
+
+
+
+
+
