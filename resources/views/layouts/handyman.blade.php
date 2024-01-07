@@ -55,11 +55,11 @@
 
     <div class="site-wrapper">
 
-        @include('layouts.inc.handyman.handyman_nav');
+        @include('layouts.inc.handyman.handyman_nav')
         <!-- Main -->
 		<div class="main" role="main">
 
-             @yield('content');
+             @yield('content')
 
              @include('layouts.inc.handyman.handyman_footer')
 
@@ -155,6 +155,7 @@
         @endif
     </script>
 
+	@yield('scripts')
 
 </body>
 </html>

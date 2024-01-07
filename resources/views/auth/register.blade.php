@@ -83,6 +83,21 @@
                             @enderror
 
 
+                            <div class="form-group">
+                                <label>{{ __('Register as') }} <span class="required">*</span></label>
+                                <select name="role_as" id="role_as" class="form-control" required>
+                                    <option value="">--Select an account type--</option>
+                                    <option value="0">HandyMan</option>
+                                    <option value="2">Customer</option>
+                                </select>
+                            </div>
+                            @error('role_as')
+                                <span class="invalid-feedback" role="alert" style="color: red">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+
+
 
                             <div class="form-group">
                                 <label for="country">{{ __('Country') }}</label>

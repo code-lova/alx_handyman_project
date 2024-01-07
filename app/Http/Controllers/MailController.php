@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CustomEmail;
 use Illuminate\Http\Request;
 use App\Mail\SendSignUpEmail;
 use App\Mail\SendSuccessEmail;
+use App\Mail\ReplyContactedMessage;
 use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
@@ -33,4 +35,35 @@ class MailController extends Controller
 
         Mail::to($email)->send(new SendSuccessEmail($data));
     }
+
+
+    public static function SendCustomEmail($email, $subject, $status, $message)
+    {
+        $data = [
+            'subject' => $subject,
+            'status' => $status,
+            'message' => $message
+        ];
+
+        Mail::to($email)->send(new CustomEmail($data));
+    }
+
+
+    public static function SendContactMessageEmail($email, $subject, $message, $name, $replied_message){
+
+        $data = [
+
+            'name' => $name,
+            'subject' => $subject,
+            'message' => $message,
+            'replied_message' => $replied_message
+        ];
+
+        Mail::to($email)->send(new ReplyContactedMessage($data));
+
+    }
+
+
+
+
 }

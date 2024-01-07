@@ -69,7 +69,7 @@
                 <div class="nav-main-inner">
                     <ul data-breakpoint="992" class="flexnav">
                         <li class="active"><a href="{{ url('handyman-app/dashboard') }}">Dashboard</a></li>
-                        <li><a href="{{ url('handyman-app/post_job') }}">Post a Job</a></li>
+                        <li><a href="{{ url('handyman-app/post-job') }}">Post a Job</a></li>
                         <li><a href="{{ url('handyman-app/profile') }}">Profile</a></li>
                         <li><a href="{{ url('handyman-app/message') }}">Message</a></li>
                         <li><a href="{{ url('handyman-app/notification') }}">Notification</a></li>

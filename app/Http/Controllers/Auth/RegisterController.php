@@ -91,21 +91,31 @@ class RegisterController extends Controller
         }else{
 
             $pass = substr(str_shuffle("0123456789ABCDEFGHIJKLMONPQRSTUVWXYZ"), 0, 6);
-            $users = new User();
-            $users->name = $request->name;
-            $users->email = $request->email;
-            $users->username = $request->username;
-            $users->location = $request->location;
-            $users->phone = $request->phone;
-            $users->password = Hash::make($request->password);
-            $users->verification_code = $pass;
-            $users->save();
+            $checker = $request->role_as;
+            if($checker == 1){
 
-            if($users != null){
+                return redirect()->back()->with('error', 'something went wrong..');
+            }else{
 
-                MailController::SendSignUpEmail($users->name, $users->email, $users->verification_code);
-                return redirect('/verification')->with('message','Check Your Email for OTP Verification Code');
+                $users = new User();
+                $users->name = $request->name;
+                $users->email = $request->email;
+                $users->username = $request->username;
+                $users->location = $request->location;
+                $users->role_as = $request->role_as;
+                $users->phone = $request->phone;
+                $users->password = Hash::make($request->password);
+                $users->verification_code = $pass;
+                $users->save();
+
+                if($users != null){
+
+                    MailController::SendSignUpEmail($users->name, $users->email, $users->verification_code);
+                    return redirect('/verification')->with('message','Check Your Email for OTP Verification Code');
+                }
+
             }
+            
 
         }
     }

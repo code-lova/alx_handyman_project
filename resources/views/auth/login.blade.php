@@ -66,7 +66,7 @@
                     <div class="spacer-lg visible-sm visible-xs"></div>
                     <div class="box">
                         <h2 style="color: chocolate;">Note:</h2>
-                        <h3 style="text-align: center; color:chocolate;">Only registered users, <br>who are rendering services can login</h3>
+                        <h3 style="text-align: center; color:chocolate;">Only registered Users/Customers, <br>who are verified can login.</h3>
                         
                     </div>
                 </div>
