@@ -1,8 +1,8 @@
-# Handyman Helpers 
+# Handyman  
 
 ## Overview
 
-The Handyman Helpers is a web platform that connects homeowners with skilled handymen to help with various home repair and improvement projects. It utilizes Laravel as the backend framework and JavaScript for enhanced interactivity on the front end.
+The Handyman is a web platform that connects homeowners with skilled handymen to help with various home repair and improvement projects. It utilizes Laravel as the backend framework and JavaScript for enhanced interactivity on the front end.
 
 ## Features
 
@@ -68,3 +68,18 @@ The Handyman Helpers is a web platform that connects homeowners with skilled han
 - Install NPM dependencies 
 - Compile assets
 - Serve application
+
+## Team Collaboration
+
+- Communication: We use Google meet for team communication to discuss the project and collaborate with other team members.
+- Project Management: We use Trello to manage tasks and track project progress. Check the Trello board for the latest updates and assigned tasks.
+- Code Reviews: All code changes go through a review process before merging. Pull requests will be reviewed by team members, and feedback will be provided for improvements.
+
+## Portfolio Demo
+
+- Check out our portfolio demo [here] (https://handyman.delacliquedesigns.com)
+
+## Authors
+
+-  Jeremiah Ebizo 
+- Anyichie Camillus flasysexy501@yahoo.com
