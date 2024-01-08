@@ -171,14 +171,21 @@ class HandyMenListController extends Controller
 
 
 
-    public function viewFullDetails(int $detailsId){
+    public function viewFullDetails(int $id){
 
         try{
 
-            $data['title'] = "View Full Details of Job Posted";
-            $data['details'] = User::findOrFail($detailsId);
-            $data['jobDetails'] = Jobs::where('userId', $detailsId)->latest()->first();
-            return view('admin.handymen.view_details', $data);
+            $job = $data['jobDetails'] = Jobs::findOrFail($id);
+            if ($job)
+            {
+                $data['details'] = User::where('id', $job->userId)->first();
+                $data['title'] = "View Full Details of Job Posted";
+                return view('admin.handymen.view_details', $data);
+            }
+
+
+
+            
 
         }catch(Exception $e)
         {

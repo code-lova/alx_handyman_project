@@ -62,14 +62,14 @@
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Type</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" value="{{ $jobDetails->job_type }}">
+                        <input type="text" class="form-control" value="{{ $jobDetails->type->name }}">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Category</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" value="{{ $jobDetails->job_category }}">
+                        <input type="text" class="form-control" value="{{ $jobDetails->category->name }}">
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@
             <!-- /.card-body -->
             <div class="card-footer">
                 <button type="submit" disabled class="btn btn-info">Save</button>
-                <a type="button" href="{{ url('admin/edit-user/'.$details->id) }}" class="btn btn-default float-right">Go Back</a>
+                <a type="button" href="{{ route('jobs.posted') }}" class="btn btn-default float-right">Go Back</a>
             </div>
             <!-- /.card-footer -->
             </form>

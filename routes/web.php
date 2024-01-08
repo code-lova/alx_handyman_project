@@ -134,7 +134,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function (){
         Route::post('/updateProfile/{profileId}', 'UpdateHandymanProfile');
         Route::get('/block-user/{id}', 'BlockUser');
         Route::get('/unblock-user/{id}', 'UnBlockUser');
-        Route::get('/viewDetails/{detailsId}', 'viewFullDetails');
+        Route::get('/viewDetails/{id}', 'viewFullDetails');
 
     });
 

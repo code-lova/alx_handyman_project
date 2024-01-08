@@ -66,7 +66,7 @@
                                     {{date("M", strtotime($val->expires_at))}} {{date("j", strtotime($val->expires_at))}}, {{date("Y", strtotime($val->expires_at))}}
                                 </td>
                                 <td>
-                                    <a type="button" href="{{ url('admin/viewDetails/'.$val->userId) }}" class="btn btn-primary"><i class="fas fa-file"></i>View</a>
+                                    <a type="button" href="{{ url('admin/viewDetails/'.$val->id) }}" class="btn btn-primary"><i class="fas fa-file"></i>View</a>
                                 </td>
                             </tr>
 

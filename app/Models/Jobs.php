@@ -29,4 +29,15 @@ class Jobs extends Model
 
         return $this->belongsTo(User::class, 'userId', 'id');
     }
+
+
+    public function category(){
+
+        return $this->belongsTo(JobCategory::class, 'job_category', 'id');
+    }
+
+    public function type(){
+
+        return $this->belongsTo(JobTypes::class, 'job_type', 'id');
+    }
 }
