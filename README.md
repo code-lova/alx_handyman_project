@@ -1,8 +1,8 @@
-# Handyman  
+# Handyman App
 
 ## Overview
 
-The Handyman is a web platform that connects homeowners with skilled handymen to help with various home repair and improvement projects. It utilizes Laravel as the backend framework and JavaScript for enhanced interactivity on the front end.
+The Handyman App is a web platform that connects homeowners with skilled handymen to help with various home repair and improvement projects. It utilizes Laravel as the backend framework and JavaScript for enhanced interactivity on the front end.
 
 ## Features
 
@@ -77,7 +77,7 @@ The Handyman is a web platform that connects homeowners with skilled handymen to
 
 ## Portfolio Demo
 
-- Check out our portfolio demo [here] (https://handyman.delacliquedesigns.com)
+- Check out our portfolio demo (https://handyman.delacliquedesigns.com)
 
 ## Authors
 
